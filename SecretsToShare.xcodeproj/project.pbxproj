@@ -1,0 +1,289 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		259890FB15EFE50100707CBD /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 259890FA15EFE50100707CBD /* UIKit.framework */; };
+		259890FD15EFE50100707CBD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 259890FC15EFE50100707CBD /* Foundation.framework */; };
+		259890FF15EFE50100707CBD /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 259890FE15EFE50100707CBD /* CoreGraphics.framework */; };
+		2598910115EFE50100707CBD /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2598910015EFE50100707CBD /* CoreData.framework */; };
+		2598910715EFE50100707CBD /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2598910515EFE50100707CBD /* InfoPlist.strings */; };
+		2598910915EFE50100707CBD /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2598910815EFE50100707CBD /* main.m */; };
+		2598910D15EFE50100707CBD /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2598910C15EFE50100707CBD /* AppDelegate.m */; };
+		2598911015EFE50200707CBD /* SecretsToShare.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2598910E15EFE50200707CBD /* SecretsToShare.xcdatamodeld */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		259890F615EFE50100707CBD /* SecretsToShare.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SecretsToShare.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		259890FA15EFE50100707CBD /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		259890FC15EFE50100707CBD /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		259890FE15EFE50100707CBD /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		2598910015EFE50100707CBD /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		2598910415EFE50100707CBD /* SecretsToShare-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SecretsToShare-Info.plist"; sourceTree = "<group>"; };
+		2598910615EFE50100707CBD /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		2598910815EFE50100707CBD /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		2598910A15EFE50100707CBD /* SecretsToShare-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SecretsToShare-Prefix.pch"; sourceTree = "<group>"; };
+		2598910B15EFE50100707CBD /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		2598910C15EFE50100707CBD /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		2598910F15EFE50200707CBD /* SecretsToShare.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SecretsToShare.xcdatamodel; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		259890F315EFE50100707CBD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				259890FB15EFE50100707CBD /* UIKit.framework in Frameworks */,
+				259890FD15EFE50100707CBD /* Foundation.framework in Frameworks */,
+				259890FF15EFE50100707CBD /* CoreGraphics.framework in Frameworks */,
+				2598910115EFE50100707CBD /* CoreData.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		259890EB15EFE50100707CBD = {
+			isa = PBXGroup;
+			children = (
+				2598910215EFE50100707CBD /* SecretsToShare */,
+				259890F915EFE50100707CBD /* Frameworks */,
+				259890F715EFE50100707CBD /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		259890F715EFE50100707CBD /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				259890F615EFE50100707CBD /* SecretsToShare.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		259890F915EFE50100707CBD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				259890FA15EFE50100707CBD /* UIKit.framework */,
+				259890FC15EFE50100707CBD /* Foundation.framework */,
+				259890FE15EFE50100707CBD /* CoreGraphics.framework */,
+				2598910015EFE50100707CBD /* CoreData.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		2598910215EFE50100707CBD /* SecretsToShare */ = {
+			isa = PBXGroup;
+			children = (
+				2598910B15EFE50100707CBD /* AppDelegate.h */,
+				2598910C15EFE50100707CBD /* AppDelegate.m */,
+				2598910E15EFE50200707CBD /* SecretsToShare.xcdatamodeld */,
+				2598910315EFE50100707CBD /* Supporting Files */,
+			);
+			path = SecretsToShare;
+			sourceTree = "<group>";
+		};
+		2598910315EFE50100707CBD /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				2598910415EFE50100707CBD /* SecretsToShare-Info.plist */,
+				2598910515EFE50100707CBD /* InfoPlist.strings */,
+				2598910815EFE50100707CBD /* main.m */,
+				2598910A15EFE50100707CBD /* SecretsToShare-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		259890F515EFE50100707CBD /* SecretsToShare */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2598911315EFE50200707CBD /* Build configuration list for PBXNativeTarget "SecretsToShare" */;
+			buildPhases = (
+				259890F215EFE50100707CBD /* Sources */,
+				259890F315EFE50100707CBD /* Frameworks */,
+				259890F415EFE50100707CBD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SecretsToShare;
+			productName = SecretsToShare;
+			productReference = 259890F615EFE50100707CBD /* SecretsToShare.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		259890ED15EFE50100707CBD /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0440;
+				ORGANIZATIONNAME = "Ran Tao";
+			};
+			buildConfigurationList = 259890F015EFE50100707CBD /* Build configuration list for PBXProject "SecretsToShare" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 259890EB15EFE50100707CBD;
+			productRefGroup = 259890F715EFE50100707CBD /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				259890F515EFE50100707CBD /* SecretsToShare */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		259890F415EFE50100707CBD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2598910715EFE50100707CBD /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		259890F215EFE50100707CBD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2598910915EFE50100707CBD /* main.m in Sources */,
+				2598910D15EFE50100707CBD /* AppDelegate.m in Sources */,
+				2598911015EFE50200707CBD /* SecretsToShare.xcdatamodeld in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		2598910515EFE50100707CBD /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2598910615EFE50100707CBD /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		2598911115EFE50200707CBD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		2598911215EFE50200707CBD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		2598911415EFE50200707CBD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SecretsToShare/SecretsToShare-Prefix.pch";
+				INFOPLIST_FILE = "SecretsToShare/SecretsToShare-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		2598911515EFE50200707CBD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SecretsToShare/SecretsToShare-Prefix.pch";
+				INFOPLIST_FILE = "SecretsToShare/SecretsToShare-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		259890F015EFE50100707CBD /* Build configuration list for PBXProject "SecretsToShare" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2598911115EFE50200707CBD /* Debug */,
+				2598911215EFE50200707CBD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2598911315EFE50200707CBD /* Build configuration list for PBXNativeTarget "SecretsToShare" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2598911415EFE50200707CBD /* Debug */,
+				2598911515EFE50200707CBD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		2598910E15EFE50200707CBD /* SecretsToShare.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				2598910F15EFE50200707CBD /* SecretsToShare.xcdatamodel */,
+			);
+			currentVersion = 2598910F15EFE50200707CBD /* SecretsToShare.xcdatamodel */;
+			path = SecretsToShare.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 259890ED15EFE50100707CBD /* Project object */;
+}
