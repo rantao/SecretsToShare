@@ -7,6 +7,8 @@
 //
 
 #import "AppDelegate.h"
+#import "SecretsTableViewController.h"
+#import "SecretStore.h"
 
 @implementation AppDelegate
 
@@ -16,8 +18,14 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+   self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
+    SecretsTableViewController *stvc =[[SecretsTableViewController alloc] initWithStyle:UITableViewStyleGrouped];
+    self.window.rootViewController = [[UINavigationController alloc] initWithRootViewController:stvc];
+    
+    //create an instace of Secret Store and pass the AppDelegate context to it
+    [SecretStore setUpWithContext:self.managedObjectContext withModel:self.managedObjectModel];
+    
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
     return YES;

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		250D27D915F037F00004E68B /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 250D27D815F037F00004E68B /* MobileCoreServices.framework */; };
 		259890FB15EFE50100707CBD /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 259890FA15EFE50100707CBD /* UIKit.framework */; };
 		259890FD15EFE50100707CBD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 259890FC15EFE50100707CBD /* Foundation.framework */; };
 		259890FF15EFE50100707CBD /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 259890FE15EFE50100707CBD /* CoreGraphics.framework */; };
@@ -15,9 +16,15 @@
 		2598910915EFE50100707CBD /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2598910815EFE50100707CBD /* main.m */; };
 		2598910D15EFE50100707CBD /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2598910C15EFE50100707CBD /* AppDelegate.m */; };
 		2598911015EFE50200707CBD /* SecretsToShare.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2598910E15EFE50200707CBD /* SecretsToShare.xcdatamodeld */; };
+		2598911E15EFE87000707CBD /* SecretsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2598911D15EFE87000707CBD /* SecretsTableViewController.m */; };
+		2598912915EFEDC500707CBD /* SecretStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 2598912815EFEDC500707CBD /* SecretStore.m */; };
+		2598912C15EFEF7800707CBD /* Secret.m in Sources */ = {isa = PBXBuildFile; fileRef = 2598912B15EFEF7800707CBD /* Secret.m */; };
+		2598913315EFF53500707CBD /* CreateSecretViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2598913115EFF53500707CBD /* CreateSecretViewController.m */; };
+		2598913415EFF53500707CBD /* CreateSecretViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2598913215EFF53500707CBD /* CreateSecretViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		250D27D815F037F00004E68B /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		259890F615EFE50100707CBD /* SecretsToShare.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SecretsToShare.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		259890FA15EFE50100707CBD /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		259890FC15EFE50100707CBD /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -30,6 +37,15 @@
 		2598910B15EFE50100707CBD /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		2598910C15EFE50100707CBD /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		2598910F15EFE50200707CBD /* SecretsToShare.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SecretsToShare.xcdatamodel; sourceTree = "<group>"; };
+		2598911C15EFE87000707CBD /* SecretsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SecretsTableViewController.h; sourceTree = "<group>"; };
+		2598911D15EFE87000707CBD /* SecretsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SecretsTableViewController.m; sourceTree = "<group>"; };
+		2598912715EFEDC500707CBD /* SecretStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SecretStore.h; sourceTree = "<group>"; };
+		2598912815EFEDC500707CBD /* SecretStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SecretStore.m; sourceTree = "<group>"; };
+		2598912A15EFEF7800707CBD /* Secret.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Secret.h; sourceTree = "<group>"; };
+		2598912B15EFEF7800707CBD /* Secret.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Secret.m; sourceTree = "<group>"; };
+		2598913015EFF53500707CBD /* CreateSecretViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CreateSecretViewController.h; sourceTree = "<group>"; };
+		2598913115EFF53500707CBD /* CreateSecretViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CreateSecretViewController.m; sourceTree = "<group>"; };
+		2598913215EFF53500707CBD /* CreateSecretViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CreateSecretViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,6 +53,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				250D27D915F037F00004E68B /* MobileCoreServices.framework in Frameworks */,
 				259890FB15EFE50100707CBD /* UIKit.framework in Frameworks */,
 				259890FD15EFE50100707CBD /* Foundation.framework in Frameworks */,
 				259890FF15EFE50100707CBD /* CoreGraphics.framework in Frameworks */,
@@ -67,6 +84,7 @@
 		259890F915EFE50100707CBD /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				250D27D815F037F00004E68B /* MobileCoreServices.framework */,
 				259890FA15EFE50100707CBD /* UIKit.framework */,
 				259890FC15EFE50100707CBD /* Foundation.framework */,
 				259890FE15EFE50100707CBD /* CoreGraphics.framework */,
@@ -80,6 +98,15 @@
 			children = (
 				2598910B15EFE50100707CBD /* AppDelegate.h */,
 				2598910C15EFE50100707CBD /* AppDelegate.m */,
+				2598912A15EFEF7800707CBD /* Secret.h */,
+				2598912B15EFEF7800707CBD /* Secret.m */,
+				2598912715EFEDC500707CBD /* SecretStore.h */,
+				2598912815EFEDC500707CBD /* SecretStore.m */,
+				2598913015EFF53500707CBD /* CreateSecretViewController.h */,
+				2598913115EFF53500707CBD /* CreateSecretViewController.m */,
+				2598913215EFF53500707CBD /* CreateSecretViewController.xib */,
+				2598911C15EFE87000707CBD /* SecretsTableViewController.h */,
+				2598911D15EFE87000707CBD /* SecretsTableViewController.m */,
 				2598910E15EFE50200707CBD /* SecretsToShare.xcdatamodeld */,
 				2598910315EFE50100707CBD /* Supporting Files */,
 			);
@@ -149,6 +176,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2598910715EFE50100707CBD /* InfoPlist.strings in Resources */,
+				2598913415EFF53500707CBD /* CreateSecretViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -162,6 +190,10 @@
 				2598910915EFE50100707CBD /* main.m in Sources */,
 				2598910D15EFE50100707CBD /* AppDelegate.m in Sources */,
 				2598911015EFE50200707CBD /* SecretsToShare.xcdatamodeld in Sources */,
+				2598911E15EFE87000707CBD /* SecretsTableViewController.m in Sources */,
+				2598912915EFEDC500707CBD /* SecretStore.m in Sources */,
+				2598912C15EFEF7800707CBD /* Secret.m in Sources */,
+				2598913315EFF53500707CBD /* CreateSecretViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -269,6 +301,7 @@
 				2598911515EFE50200707CBD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
