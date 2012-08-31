@@ -10,6 +10,8 @@
 
 @interface CreateSecretViewController : UIViewController
 @property (weak, nonatomic) IBOutlet UITextView *secretTextView;
+@property (weak, nonatomic) IBOutlet UIButton *shareButton;
+@property (weak, nonatomic) IBOutlet UIImageView *userImage;
 - (IBAction)shareSecretButtonPressed:(UIButton *)sender;
 
 @end

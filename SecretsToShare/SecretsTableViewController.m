@@ -94,6 +94,7 @@
     [formatter setDateFormat:@"EEEE MM.dd.yyyy 'at' hh:mm a"];
     NSString *stringFromDate = [formatter stringFromDate:[[secrets objectAtIndex:[indexPath row]] date]];
     cell.detailTextLabel.text = stringFromDate;
+    cell.imageView.image = [UIImage imageWithData:[[secrets objectAtIndex:[indexPath row]] imageData]];
     return cell;
 }
 

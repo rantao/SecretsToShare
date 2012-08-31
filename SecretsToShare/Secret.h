@@ -14,5 +14,6 @@
 
 @property (nonatomic, retain) NSString * entry;
 @property (nonatomic, retain) NSDate * date;
+@property (nonatomic, retain) NSData * imageData;
 
 @end

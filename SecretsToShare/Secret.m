@@ -13,4 +13,5 @@
 
 @dynamic entry;
 @dynamic date;
+@dynamic imageData;
 @end
