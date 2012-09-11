@@ -11,9 +11,10 @@
 #import "SecretStore.h"
 #import "Secret.h"
 
-@interface CreateSecretViewController () <UINavigationControllerDelegate,UIImagePickerControllerDelegate, UIScrollViewDelegate>
+@interface CreateSecretViewController () <UINavigationControllerDelegate,UIImagePickerControllerDelegate, UIScrollViewDelegate, UIActionSheetDelegate>
 @property (nonatomic, strong) NSData* imageData;
 @property (nonatomic, strong) UIScrollView *scrollView;
+@property (nonatomic, strong) UIActionSheet *actionSheet;
 @end
 
 @implementation CreateSecretViewController
@@ -67,6 +68,36 @@
 }
 
 -(void) pushAddImage{
+    self.actionSheet = [[UIActionSheet alloc] initWithTitle:@"Add photo from:"
+                                        delegate:self
+                               cancelButtonTitle:@"Cancel"
+                          destructiveButtonTitle:nil
+                               otherButtonTitles:@"Camera", @"Photo Library", nil];
+    
+    // Show the sheet
+    [self.actionSheet showInView:self.view];
+}
+
+- (void)actionSheet:(UIActionSheet *)actionSheet didDismissWithButtonIndex:(NSInteger)buttonIndex
+{
+    if (buttonIndex == 0) {
+        [self openCamera];
+    } else if (buttonIndex ==1) {
+        [self openLibrary];
+    }
+}
+
+-(void) openCamera {
+    //push a new image view controller and save the camera or user's library
+    UIImagePickerController *ipc = [UIImagePickerController new];
+    ipc.delegate = self;
+    ipc.sourceType = UIImagePickerControllerSourceTypeCamera;
+    ipc.mediaTypes = [NSArray arrayWithObject:(NSString*) kUTTypeImage];
+    ipc.modalTransitionStyle = UIModalTransitionStylePartialCurl;
+    [self presentViewController:ipc animated:YES completion:nil];
+}
+
+-(void) openLibrary {
     //push a new image view controller and save the camera or user's library
     UIImagePickerController *ipc = [UIImagePickerController new];
     ipc.delegate = self;
@@ -74,7 +105,6 @@
     ipc.mediaTypes = [NSArray arrayWithObject:(NSString*) kUTTypeImage];
     ipc.modalTransitionStyle = UIModalTransitionStylePartialCurl;
     [self presentViewController:ipc animated:YES completion:nil];
-    
 }
 
 -(void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info {

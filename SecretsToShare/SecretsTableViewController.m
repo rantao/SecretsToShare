@@ -8,6 +8,7 @@
 
 #import "SecretsTableViewController.h"
 #import "CreateSecretViewController.h"
+#import "ImageTableCell.h"
 #import "SecretStore.h"
 #import "Secret.h"
 
@@ -81,22 +82,40 @@
 {
    
     static NSString *CellIdentifier = @"Cell";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
-    
+    //UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    ImageTableCell *cell = (ImageTableCell *) [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if (!cell) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifier];
+        //cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifier];
+        
+        //instead use custome cell
+        NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"ImageTableCell" owner:self options:nil];
+        cell = [nib objectAtIndex:0];
     }
     
     // Configure the cell...
     NSArray *secrets = [SecretStore allSecrets];
-    cell.textLabel.text = [[secrets objectAtIndex:[indexPath row]] entry];
+//    cell.textLabel.text = [[secrets objectAtIndex:[indexPath row]] entry];
+//    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+//    [formatter setDateFormat:@"EEEE MM.dd.yyyy 'at' hh:mm a"];
+//    NSString *stringFromDate = [formatter stringFromDate:[[secrets objectAtIndex:[indexPath row]] date]];
+//    cell.detailTextLabel.text = stringFromDate;
+//    cell.imageView.image = [UIImage imageWithData:[[secrets objectAtIndex:[indexPath row]] imageData]];
+    
+    //use custom cell layout
+    cell.titleLabel.text = [[secrets objectAtIndex:[indexPath row]] entry];
     NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
     [formatter setDateFormat:@"EEEE MM.dd.yyyy 'at' hh:mm a"];
     NSString *stringFromDate = [formatter stringFromDate:[[secrets objectAtIndex:[indexPath row]] date]];
-    cell.detailTextLabel.text = stringFromDate;
-    cell.imageView.image = [UIImage imageWithData:[[secrets objectAtIndex:[indexPath row]] imageData]];
+    cell.timeLabel.text = stringFromDate;
+    cell.photo.image = [UIImage imageWithData:[[secrets objectAtIndex:[indexPath row]] imageData]];
     return cell;
 }
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return 367;
+}
+
 
 /*
 // Override to support conditional editing of the table view.

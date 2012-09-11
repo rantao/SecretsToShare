@@ -20,6 +20,7 @@
 {
    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
+    [[UIApplication sharedApplication] setStatusBarHidden:YES];
     SecretsTableViewController *stvc =[[SecretsTableViewController alloc] initWithStyle:UITableViewStyleGrouped];
     self.window.rootViewController = [[UINavigationController alloc] initWithRootViewController:stvc];
     
