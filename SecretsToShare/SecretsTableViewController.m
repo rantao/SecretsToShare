@@ -68,15 +68,16 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-    // Return the number of sections.    
-    return 1;
+    // Return the number of sections.
+    NSArray *secrets = [SecretStore allSecrets];
+    return [secrets count];
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     // Return the number of rows in the section.
-    NSArray *secrets = [SecretStore allSecrets];
-    return [secrets count];}
+    return 1;
+}
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
@@ -102,18 +103,18 @@
 //    cell.imageView.image = [UIImage imageWithData:[[secrets objectAtIndex:[indexPath row]] imageData]];
     
     //use custom cell layout
-    cell.titleLabel.text = [[secrets objectAtIndex:[indexPath row]] entry];
+    cell.titleLabel.text = [[secrets objectAtIndex:[indexPath section]] entry];
     NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
     [formatter setDateFormat:@"EEEE MM.dd.yyyy 'at' hh:mm a"];
-    NSString *stringFromDate = [formatter stringFromDate:[[secrets objectAtIndex:[indexPath row]] date]];
+    NSString *stringFromDate = [formatter stringFromDate:[[secrets objectAtIndex:[indexPath section]] date]];
     cell.timeLabel.text = stringFromDate;
-    cell.photo.image = [UIImage imageWithData:[[secrets objectAtIndex:[indexPath row]] imageData]];
+    cell.photo.image = [UIImage imageWithData:[[secrets objectAtIndex:[indexPath section]] imageData]];
     return cell;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    return 367;
+    return 397;
 }
 
 
